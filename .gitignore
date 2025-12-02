@@ -1,0 +1,31 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Environment folders
+venv/
+.env/
+.venv/
+
+# VSCode
+.vscode/
+
+# macOS junk
+.DS_Store
+
+# Data files
+data/raw/*
+data/processed/*
+!data/sample/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# HuggingFace cache
+~/.cache/huggingface/
+
+# Logs
+logs/
+*.log
