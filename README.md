@@ -1,11 +1,11 @@
 
-# 📊 Crypto Sentiment Analysis Pipeline  
+# Crypto Sentiment Analysis Pipeline  
 ### *Multi-Model Sentiment Analysis on Large-Scale Crypto Social Data (Tweets, Reddit, News)*  
 **Python • HuggingFace Transformers • FinBERT • BERTweet • NLP • Data Engineering**
 
 ---
 
-## 🚀 Overview  
+## Overview  
 This project builds a **robust, production-style sentiment analysis pipeline** for cryptocurrency-related social media content. It ingests large-scale datasets (Twitter, Reddit), cleans the data, and applies **batched transformer-based sentiment models** to extract market sentiment for assets like Bitcoin, Ethereum, and other major cryptocurrencies.
 
 The pipeline is engineered for:
@@ -17,24 +17,24 @@ The pipeline is engineered for:
 
 ---
 
-## ✨ Features
+## Features
 
-### 🔹 Multi-model Sentiment Analysis  
+### Multi-model Sentiment Analysis  
 - **FinBERT-tone (safetensors)** — Financial tone classification  
 - **BERTweet Sentiment (safetensors)** — Social media sentiment  
 
-### 🔹 Batched, Vectorized Inference (20–30× faster)  
+### Batched, Vectorized Inference (20–30× faster)  
 - Efficient tokenization (`max_length=64`)  
 - Large batch sizes (`batch_size=64–128`)  
 - GPU-ready for instant throughput  
 
-### 🔹 Robust Dataset Loader  
+### Robust Dataset Loader  
 - Auto-detects text fields across sources (`text`, `body`, `selftext`, etc.)  
 - Handles malformed CSVs safely  
 - Fixes encoding errors (latin1, ignore)  
 - Optional row caps for development (`ROW_LIMIT=5000`)  
 
-### 🔹 Modular Architecture  
+### Modular Architecture  
 - `/extract` → dataset ingestion  
 - `/preprocess` → text cleaning  
 - `/models` → batching-optimized transformer inference  
@@ -42,32 +42,7 @@ The pipeline is engineered for:
 
 ---
 
-## 📁 Project Structure
-
-```
-sentiment_analysis_crypto/
-├── src/
-│   ├── extract/
-│   ├── preprocess/
-│   ├── models/
-│   └── pipeline.py
-│
-├── data/
-│   ├── raw/        # ignored by Git
-│   └── sample/     # optional small demo files
-│
-├── notebooks/
-│   └── colab_sentiment_pipeline.ipynb
-│
-├── requirements.txt
-├── README.md
-├── .gitignore
-└── LICENSE (optional)
-```
-
----
-
-## 🛠 Installation
+## Installation
 
 ```bash
 git clone https://github.com/<your-username>/<repo-name>.git
@@ -89,7 +64,7 @@ pip install -r requirements.txt
 
 ---
 
-## ▶️ Running the Pipeline
+## Running the Pipeline
 
 Place datasets into:
 
@@ -103,7 +78,7 @@ Run:
 python src/pipeline.py
 ```
 
-### 🔎 Fast Mode (~10 minutes)
+### Fast Mode (~10 minutes)
 Set:
 
 ```python
@@ -112,13 +87,13 @@ ROW_LIMIT = 5000
 
 ---
 
-## ⚡ GPU Version (Google Colab)
+## GPU Version (Google Colab)
 
 Use the notebook in `/notebooks` for a fully GPU-accelerated run.
 
 ---
 
-## 📈 Output
+## Output
 
 Creates:
 
@@ -135,20 +110,9 @@ With:
 
 ---
 
-## 🧩 Future Enhancements
+## Future Enhancements
 
 - Streamlit dashboard  
 - Topic modeling (BERTopic)  
 - LLM-based sentiment explanations  
 - Live data ingestion  
-
----
-
-## 📄 License  
-MIT License (optional)
-
----
-
-## 👤 Author  
-**Devyn Byrd**  
-Feel free to connect on LinkedIn or GitHub!
